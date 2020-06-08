@@ -1,4 +1,4 @@
-package com.xueliang.springcloud.enties;
+package com.xueliang.springcloud.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

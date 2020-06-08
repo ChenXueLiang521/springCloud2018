@@ -7,7 +7,7 @@
     <select id="findById" resultType="Dept" parameterType="Long">
      select deptno,dname,db_source from dept where deptno=#{deptno};
   </select>
-    <select id="findAll" resultType="com.xueliang.springcloud.enties.Dept">
+    <select id="findAll" resultType="Dept">
      select deptno,dname,db_source from dept;
   </select>
     <insert id="addDept" parameterType="Dept">
