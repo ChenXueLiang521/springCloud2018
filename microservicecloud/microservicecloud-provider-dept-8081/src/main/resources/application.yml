@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8081
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis 配置文件所在路径
@@ -13,7 +13,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
     driver-class-name: com.mysql.cj.jdbc.Driver  #mysql驱动包
-    url: jdbc:mysql://xxx:3306/cloudDB01
+    url:
     username: xueliangtest
     password: xueliangtest
     dbcp2:
@@ -21,3 +21,20 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 300
+
+eureka:
+  client:  #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/,http://eureka7004.com:7004/eureka/
+  instance:
+    instance-id: microservicecloud-dept8081 #自定义服务器名称
+    prefer-ip-address: true #访问路径可以显示IP
+
+info:
+  app:
+    name: xueliang-microservicecloud
+  company:
+    name: www.xueliang.com
+  build:
+    artifactId: $project.artifactId$
+    version: $project.version$
